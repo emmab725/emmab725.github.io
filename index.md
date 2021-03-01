@@ -10,4 +10,4 @@ Hi! I'm Emma Brown and I am a senior at Middlebury College studying Geography an
 - [Gravity Model of Spatial Interaction](gravity/gravity.md)
 
 ## Blog Posts
-- What is Open Source GIS?
+- [What is Open Source GIS?](blog-posts/open-source.md)
