@@ -1,3 +1,8 @@
+---
+layout: page
+title: What is Open GIScience?
+---
+
 #What is Open GIScience?
 
 While my previous understanding of the term “open source” was in the context of using free software such as QGIS, this weeks’ readings (Rey, 2009 and Singleton, Spielman, and Brunson, 2016) offered insight into what Open Source GIScience really means, as well as its benefits and risks. Open Source GIScience is defined as “a revolutionary collection of tools and processes through which individuals create, share, and apply new software and knowledge” (Rey, 2009). Open Source GIScience can open wide doors to collaboration and progress in creating tools available for all, however, because of its collaborative nature, there is much room for error. 
