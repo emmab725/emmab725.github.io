@@ -22,3 +22,7 @@ More detailed workflows on these processes can be found here.
 
 Population data for New England: [netown.gpkg](/assets/netown.gpkg) (compiled by J. Holler using TidyCensus)
 Dartmouth Atlas of Health [boundary files](https://atlasdata.dartmouth.edu/downloads/supplemental#boundaries)
+
+# *GRAVITY MODEL WORKFLOW*
+
+![Gravity Model Workflow](assets/gravitymodel)
