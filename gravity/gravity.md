@@ -19,3 +19,6 @@ This analysis uses hospital data acquired from [Homeland Security](https://hifld
 Further, as aforementioned, the target hospitals were grouped by zip code, and the number of beds per zip code were summarized. These were then converted to centroid points to use in our analysis.
 
 More detailed workflows on these processes can be found here. 
+
+Population data for New England: [netown.gpkg](/assets/netown.gpkg) (compiled by J. Holler using TidyCensus)
+Dartmouth Atlas of Health [boundary files](https://atlasdata.dartmouth.edu/downloads/supplemental#boundaries)
