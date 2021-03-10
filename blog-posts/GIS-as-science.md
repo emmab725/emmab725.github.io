@@ -1,4 +1,7 @@
-#Is GIS a Science?
+---
+layout: page
+title: Is GIS a Science?
+---
 
 Even after studying Geography for the past four years, I’ve always struggled to explain what GIS is to those unfamiliar with it. Up until taking this course, I thought of GIS as strictly a tool — to keep it simple, I’d describe it as a software that allows users to spatially analyze various data. However, this relatively straightforward however fails to capture the magnitude of just how powerful GIS is. The applications of GIS in classes prior to this course were very much as a tool — learning ways in which I could use the software to draw conclusions about the organization of space. Where is most underserved by public transportation? What is the most ideal location to place solar panels? GIS was a stepping stone to reach answers to spatial questions. After reading Wright et al.’s “GIS: Tool or science? Demystifying the persistent ambiguity of GIS as “tool” versus “science,” I was challenged to confront the various definitions of GIS and reflect on my prior understanding of the software.
 
