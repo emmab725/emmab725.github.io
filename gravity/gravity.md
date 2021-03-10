@@ -28,7 +28,7 @@ Dartmouth Atlas of Health [boundary files](https://atlasdata.dartmouth.edu/downl
 
 # *GRAVITY MODEL WORKFLOW*
 
-The workflow for the creation of the gravity model is below:
+The workflow for the creation of the gravity model is below (a .model3 file can be downloaded [here](assets/GravityModel.model3):
 
 ![Gravity Model Workflow](assets/GravityModelWorkflow.png)
 
