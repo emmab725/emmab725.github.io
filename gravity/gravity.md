@@ -30,6 +30,8 @@ Dartmouth Atlas of Health [boundary files](https://atlasdata.dartmouth.edu/downl
 
 The workflow for the creation of the gravity model is below:
 
+<img width="934" alt="GravityModelWorkflow" src="https://user-images.githubusercontent.com/79551621/110569293-55020900-8122-11eb-9b70-afee803e01dc.png">
+
 ![Gravity Model Workflow](assets/gravitymodel)
 
 # *RESULTS*
