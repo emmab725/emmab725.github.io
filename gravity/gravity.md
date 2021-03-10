@@ -18,7 +18,9 @@ This analysis uses hospital data acquired from [Homeland Security](https://hifld
 
 Further, as aforementioned, the target hospitals were grouped by zip code, and the number of beds per zip code were summarized. These were then converted to centroid points to use in our analysis.
 
-More detailed workflows on these processes can be found here. 
+More detailed workflows on these processes is shown below:
+
+![Gravity Model Preprocessing Workflow](https://user-images.githubusercontent.com/79551621/110568895-c2616a00-8121-11eb-9cbb-1a9c26a82cad.png)
 
 Population data for New England: [netown.gpkg](/assets/netown.gpkg) (compiled by J. Holler using TidyCensus)
 
@@ -26,4 +28,14 @@ Dartmouth Atlas of Health [boundary files](https://atlasdata.dartmouth.edu/downl
 
 # *GRAVITY MODEL WORKFLOW*
 
+The workflow for the creation of the gravity model is below:
+
 ![Gravity Model Workflow](assets/gravitymodel)
+
+# *RESULTS*
+
+For this project, I zoomed in on New York State, the hospital catchments for which are shown below.
+
+static map here
+
+When comparing the the service areas created by my model to the Dartmouth Atlas' catchments, there is some variation. As anticipated, the regions of both models do not align perfectly, however, it is interesting to compare the two to see how they overlap in certain areas as a general way to check how my analysis compares to a far more well-established lab's. Obviously, there are many ways in which these types of models can vary and how they can improve based on what the user seeks to answer. For example, one way that this model may be improved is by using an OD distance matrix which calculates distances based on a given road network, rather than straight-line Euclidian distance as the model I've created does. This would allow for a more accurate measurement of travel time, which is definitely a factor that influences travel decisions. Further, there are variables beyond the scope of computer-based models that exist in everyday life such as weather,road construction, and injury severity that may sway an individual's decision to go to one hospital or another. However, this model is definitely a useful tool to predict the interaction between two places and can be applied in many scenarios.
