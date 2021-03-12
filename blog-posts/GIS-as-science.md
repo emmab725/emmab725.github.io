@@ -11,4 +11,5 @@ This segues well into a discussion of how open source GIS can contribute to solv
 
 ### Sources
 Dawn J. Wright , Michael F. Goodchild & James D. Proctor (1997) Demystifying the Persistent Ambiguity of GIS as ‘Tool’ versus ‘Science’, , 87:2, 346-362, DOI: 10.1111/0004-5608.872057
+
 National Academies of Sciences, Engineering, and Medicine 2019. Reproducibility and Replicability in Science. Washington, DC: The National Academies Press. https://doi.org/10.17226/25303.
