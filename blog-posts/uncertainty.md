@@ -1,3 +1,8 @@
+---
+layout: page
+title: Uncertainty and Error in Geography
+---
+
 One of the things that drew me the most to Geography was its blend of science and humanities, making it a unique field that investigates phenomena from a multitude of perspectives. However, this blend of quantitative and qualitative elements to the field tends to cause uncertainty in many studies. As discussed by [Longley et al.’s piece on error and uncertainty](https://github.com/GIS4DEV/literature/blob/master/Uncertainty%20Longley%20et%20al.pdf), the nature of the field — understanding the world — lends itself to uncertain conclusions. Because all representations of the world are incomplete, it is almost impossible to accurately portray the world’s various attributes on a map. 
 
 Maps are often taken as fact; a truth that goes unquestioned. They have an immense capability to control and alter how people perceive the world, and whose stories are told. However, they reflect the cartographer’s view of reality. They are a subjective representation of a landscape that often reveals only one perspective. Mapmaking is often considered quantitative, however, many things that Geographers seek to map aren’t bounded by rigid lines. These things like animal habitat, migration patterns, or the demographic makeup of a city all require decisions that are not arbitrary. Through this arises uncertainty and potential for error in the way the world and its spatial patterns are conveyed. 
