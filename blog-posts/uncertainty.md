@@ -13,4 +13,5 @@ Longley et al. explain “uncertainty” to be an umbrella term to describe prob
 
 ### Sources:
 NASEM. 2019. Reproducibility and Replicability in Science. Washington, D.C.: National Academies Press. https://www.nap.edu/catalog/25303.
+
 Longley, P. A., M. F. Goodchild, D. J. Maguire, and D. W. Rhind. 2008. Geographical information systems and science 2nd ed. Chichester: Wiley. (only chapter 6: Uncertainty, pages 127-153)
