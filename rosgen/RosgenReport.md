@@ -58,7 +58,7 @@ The randomly assigned location for this replication, location id 6, had multiple
 ## Replication Results
 
 Figures to Include:
-- map of the study site shaded elevation
+![Elevation](assets/Elevation.png)
 ![Slope](assets/Slope.png)
 - Map of the study site stream/river centerlines and final mean centerline
 - Map of the study site valley centerlines and final mean centerline
