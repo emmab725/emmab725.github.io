@@ -26,7 +26,7 @@ Understanding river morphology and its potential implications for the river's su
 Kasprak et al. reproduced the study in ***The Blurred Line between Form and Process: A Comparison of Stream Channel Classification Frameworks*** (2016) which compared the Rosgen classification with three other classification methods: the River Styles Framework, the Natural Channel Classification, as well as a statistical classification. Kasprak et al. identifies where the models diverge in their methods to help understand the strengths and weaknesses that accompany each classification. The study concluded that the models were fairly consistent and that differences could be attributed to the spatial scale of input data, the requisite metrics and their order in completing a framework’s decision tree, whether the framework attempts to classify current or historic channel form.
 The goal of this replication was to produce a Rosgen classification using GIS methods. While this comes with the risk of oversimplifying, creating a reproducible methodology in GIS allows for a much easier way of assessing a larger area in an efficient manner without having to visit the study site.
 
-### Methods and Data
+## Methods and Data
 
 Our replication study focuses on the John Day Watershed in Oregon, the same site used in the Kasprak, et al. study. Each student in the class was assigned a stream in this watershed to focus on.
 
@@ -38,7 +38,7 @@ Data:
 
 First, GIS analysis was conducted in GRASS GIS, with specific instructions [here](https://github.com/emmab725/RE-rosgen/blob/main/procedure/protocols/1-Research_Protocol_GRASS.pdf). Using a MacOS system required the installation of [The Unarchiver app](https://theunarchiver.com) which allowed me to unzip large files as well as [XCode](https://developer.apple.com/xcode/) which enabled me to download GRASS plugins. Two models, one for [visualizing the data](https://github.com/emmab725/RE-rosgen/blob/main/procedure/code/visualize.gxm) and for [calculating centerlines](https://github.com/emmab725/RE-rosgen/blob/main/procedure/code/center_line_length_no_clip.gxm) were used to eliminate many steps in the workflow.
 
-I then used R Studio for following code analyses and graph construction, the markdown file for which can be found [here](). Here, we constructed a graph showing the cross-sectional profile of the CHaMPs point, the longitudinal profile and flood-prone width.
+I then used R Studio for following code analyses and graph construction, the markdown file for which can be found [here](https://github.com/emmab725/RE-rosgen/blob/main/procedure/code/2-ProfileViewer.Rmd). Here, we constructed a graph showing the cross-sectional profile of the CHaMPs point, the longitudinal profile and flood-prone width.
 
 These analyses provided the necessary criteria to classify the site based on Rosgen's methods:
 - Entrenchment Ratio (Valley Width / Bankfull Width)
@@ -50,7 +50,7 @@ These analyses provided the necessary criteria to classify the site based on Ros
 Rosgen's classification scheme is shown below:
 ![Rosgen Classification](assets/RosgenClass.jpg)
 
-### Unplanned Deviations from the Protocol
+## Unplanned Deviations from the Protocol
 As stated above, I had some trouble installing plug-ins and unzipping large files with my MacOS system. Further, my site buffer was not large enough to include both valley banks, so I used an altered model that did not clip the centerlines to the buffer zone. Because of this, the lengths of these lines were more subjective and based off of my ability to digitize lines of similar lengths. The slope calculated in the R Studio notebook also was noticeably erroneous. Because it averaged the slope for the study area, large outliers due to subjective digitizing skewed the average slope. Thus, I simply calculated a new slope by referencing the longitudinal profile's rise/run.
 
 The randomly assigned location for this replication, location id 6, had multiple points recorded in the CHaMP data from different years. I elected to use the data from the most recent year, 2016.
@@ -100,7 +100,7 @@ My analyses determined the study site (location id 6, Middle Fork John Day River
 
 Errors could have also risen because of the granularity of the data used -- Kasprak used 0.1 m DEM resolution, while our analyses used 1 m resolution. Further, digitizing can be very subjective, especially for someone who is not a geologist or well-acquainted with the study area. This made it difficult to identify the river banks and valley edges, which could be a source of error for the analysis.
 
-# Conclusions
+## Conclusions
 
 River classifications are incredibly important for a variety of reasons, and using GIS to classify streams is an efficient way to conclude and communicate results on a large scale without having to travel to the study site. Further, the incredibly dynamic nature of rivers entails that they must be re-classified often, thus having a streamlined methodology to do so is imperative in order to have up-to-date data. However, this analysis points to uncertainty and subjectivity within GIS analysis that is difficult to mitigate. Kasprak et al. also illustrated the importance of comparing methods and highlighted that even well thought-out and supported classification methods can have poor agreement. Thus illustrates the necessity of understanding what parts of the classification scheme are important in specific circumstances in order to have the most meaningful impact.
 
