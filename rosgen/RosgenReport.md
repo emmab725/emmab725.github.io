@@ -36,7 +36,7 @@ Data:
 - CHaMPS (Columbia Habitat Monitoring Program) data
 - John Day Watershed Digital Elevation Model
 
-First, GIS analysis was conducted in GRASS GIS, with specific instructions [here](). Using a MacOS system required the installation of [The Unarchiver app](https://theunarchiver.com) which allowed me to unzip large files as well as [XCode](https://developer.apple.com/xcode/) which enabled me to download GRASS plugins. Two models, one for [visualizing the data]() and for [calculating centerlines]() were used to eliminate many steps in the workflow.
+First, GIS analysis was conducted in GRASS GIS, with specific instructions [here](https://github.com/emmab725/RE-rosgen/blob/main/procedure/protocols/1-Research_Protocol_GRASS.pdf). Using a MacOS system required the installation of [The Unarchiver app](https://theunarchiver.com) which allowed me to unzip large files as well as [XCode](https://developer.apple.com/xcode/) which enabled me to download GRASS plugins. Two models, one for [visualizing the data](https://github.com/emmab725/RE-rosgen/blob/main/procedure/code/visualize.gxm) and for [calculating centerlines](https://github.com/emmab725/RE-rosgen/blob/main/procedure/code/center_line_length_no_clip.gxm) were used to eliminate many steps in the workflow.
 
 I then used R Studio for following code analyses and graph construction, the markdown file for which can be found [here](). Here, we constructed a graph showing the cross-sectional profile of the CHaMPs point, the longitudinal profile and flood-prone width.
 
