@@ -8,6 +8,7 @@ Hi! I'm Emma Brown and I am a senior at Middlebury College studying Geography an
 
 ## GIS Analyses
 - [Gravity Model of Spatial Interaction](gravity/gravity.md)
+- [Rosgen Classification of Streams](rosgen/RosgenReport.md)
 
 ## Blog Posts
 - [What is Open Source GIS?](blog-posts/open-source.md)
