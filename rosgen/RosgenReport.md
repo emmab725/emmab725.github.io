@@ -60,8 +60,8 @@ The randomly assigned location for this replication, location id 6, had multiple
 Figures to Include:
 ![Elevation](assets/Elevation.png)
 ![Slope](assets/Slope.png)
-- Map of the study site stream/river centerlines and final mean centerline
-- Map of the study site valley centerlines and final mean centerline
+![RiverCenter](assets/RiverCenter.png)
+![ValleyCenter](assets/ValleyCenter.png)
 ![Longitudinal profile](assets/LongitudinalProfile.png)
 ![Cross-sectional profile](assets/CrossSectionalProfile.png)
 
