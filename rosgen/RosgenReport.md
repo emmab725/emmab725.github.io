@@ -57,7 +57,6 @@ The randomly assigned location for this replication, location id 6, had multiple
 
 ## Replication Results
 
-Figures to Include:
 ![Elevation](assets/Elevation.png)
 ![Slope](assets/Slope.png)
 ![RiverCenter](assets/RiverCenter.png)
