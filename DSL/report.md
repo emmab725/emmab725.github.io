@@ -1,8 +1,17 @@
+---
+layout: page
+title: Analyzing Flood Risk of Schools in Dar es Salaam, Tanzania
+---
+
 **Question**
+
 What schools are at risk of flooding in the city of Dar es Salaam based on current projected zones of flood Risk? How would flood risk to schools increase if the flood zones expanded by 10m or 50m?
 
 **Introduction:**
-Creating and maintaining equitable access to education is essential for planning resilient communities, especially in cities like Dar es Salaam where rapid urbanization and population growth is bringing in large numbers of new residents. We explored the flood risk of schools and universities within the city of Dar es Salaam, based on the location of Flood Zones determined by participatory mapping projects in the [Resilience Academy](https://resilienceacademy.ac.tz/)
+
+Dar es Salaam, Tanzania's economic center and fourth largest city, is incredibly vulnerable to floods due to its coastal nature and prominent rivers that dissect the city. Floods are especially dangerous to low-lying informal settlements that are often inhabited by low-income individuals. Not only does this pose health risks and infrastructural damage, flooding can affect schools and hospitals which then limits the services in these low-income areas. Further, climate change will only exacerbate this issue as flooding becomes more prominent and more dangerous. 
+
+Creating and maintaining equitable access to education is essential for planning resilient communities, especially in cities like Dar es Salaam where rapid urbanization and population growth is bringing in large numbers of new residents. We explored the flood risk of schools and universities within the city of Dar es Salaam, based on the location of flood zones determined by participatory mapping projects in the [Resilience Academy](https://resilienceacademy.ac.tz/)
 
 While the flood vulnerability layer from the Resilience Academy is a useful starting off point for understanding the schools that may experience the most flood related risk, we also wanted to identify areas that could be considered vulnerable if the flood risk got more extreme. Models based on already existing flood data are useful, but in a community fighting back against increased rainfall, rapid urbanization, and coastal retreat, the use of models that consider potential projected risk help increase the potential for transformation and adaptation, instead of short term coping mechanisms. [A report](https://cff-prod.s3.amazonaws.com/storage/files/uHRj9zy1mOt3dNavohVo7WaB3Qubhy2xNB7DCGqA.pdf) by the C40 Climate Leadership Group stated that the coastline of Dar es Salaam has retreated 200m in the past 50 years, and the city has experienced two extreme rainfall events in 2018 and 2019, resulting in the expansion of risk zones.
 
@@ -120,6 +129,7 @@ GROUP BY flooded_50, t
 The result of the two additional buffers, flooded_10 and flooded_50, tell us that 7% of schools would be at risk if the flood zone grew by just an additional 10m, and 12% at risk if it grew by 50m.
 
 **Results:**
+
 The spatial distribution of schools that are vulnerable to flood risk in Dar es Salaam can be found close to the coastlines, but also near the 4 rivers, part of the city's fluvial system.
 
 To further explore the spatial dimensions of flood risk in Dar es Salaam schools, you can access our [interactive map](assets/Webmap).
@@ -127,6 +137,7 @@ To further explore the spatial dimensions of flood risk in Dar es Salaam schools
 While the Administrative Wards of Dar es Salaam are labeled on the map, and serve as a useful backdrop for understanding location of these school buildings, we choose not to evaluate risk based on schools per ward due to the nature of the education system in the city. Oftentimes students do not go to the school closest to them, so instead of grouping schools based on a spatial component we chose to focus on the individual projected risk of each building.
 
 **Sources**
+
 - [Open Street Map](https://www.openstreetmap.org/#map=12/-6.8162/39.2203)
 - [Ramana Huria](https://ramanihuria.org/en/): a community mapping project for Dar es Salaam, Tanzania
 - [Resilience Academy](https://resilienceacademy.ac.tz/)
