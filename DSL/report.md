@@ -132,6 +132,8 @@ The result of the two additional buffers, flooded_10 and flooded_50, tell us tha
 
 The spatial distribution of schools that are vulnerable to flood risk in Dar es Salaam can be found close to the coastlines, but also near the 4 rivers, part of the city's fluvial system.
 
+![FloodsDSL](assets/FloodsDSL.jpeg)
+
 To further explore the spatial dimensions of flood risk in Dar es Salaam schools, you can access our [interactive map](assets/Webmap).
 
 While the Administrative Wards of Dar es Salaam are labeled on the map, and serve as a useful backdrop for understanding location of these school buildings, we choose not to evaluate risk based on schools per ward due to the nature of the education system in the city. Oftentimes students do not go to the school closest to them, so instead of grouping schools based on a spatial component we chose to focus on the individual projected risk of each building.
