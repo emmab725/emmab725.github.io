@@ -141,6 +141,6 @@ While the Administrative Wards of Dar es Salaam are labeled on the map, and serv
 *Sources:*
 
 - [Open Street Map](https://www.openstreetmap.org/#map=12/-6.8162/39.2203)
-- [Ramana Huria](https://ramanihuria.org/en/): a community mapping project for Dar es Salaam, Tanzania
+- [Ramani Huria](https://ramanihuria.org/en/): a community mapping project for Dar es Salaam, Tanzania
 - [Resilience Academy](https://resilienceacademy.ac.tz/)
 - [Fooding in East Africa](https://cff-prod.s3.amazonaws.com/storage/files/uHRj9zy1mOt3dNavohVo7WaB3Qubhy2xNB7DCGqA.pdf)
