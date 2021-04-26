@@ -19,7 +19,7 @@ Flooding impacts school communities most directly through the potential for scho
 
 ## *Methods:*
 
-The entire set of SQL queries for this analysis can be found [here](schools.sql).
+The entire set of SQL queries for this analysis can be found [here](assets/schools.sql).
 
 The first step was to use the open street map data to create a table of schools and universities in the city, as well as some following steps to clean up the data tables:
 
