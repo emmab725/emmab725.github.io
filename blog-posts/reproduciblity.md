@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page 
 title: Research Uncertainty: Paving the Way for Reproduction vs. Replication
 ---
 
