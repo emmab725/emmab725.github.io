@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Research Uncertainty: Paving the way for Reproduction vs. Replication
+title: Research Uncertainty: Paving the Way for Reproduction vs. Replication
 ---
 
-###Summarize the analytical techniques applied and how the results of those techniques were communicated in text, numbers, tables or data visualizations.
+### Summarize the analytical techniques applied and how the results of those techniques were communicated in text, numbers, tables or data visualizations.
 
 Wang et al. (2016)’s study used Twitter data to analyze their “attributes pertinent to space, time, content, and network” to reveal “situational awareness” during wildfire events. Situational awareness is defined as “ perception of elements in the environment within a volume of time and space, the comprehension of their meaning, and the projection of their status in the near future.” As social media becomes more prominent in everyday life among many generations, it can be a useful tool in disseminating information, especially related to emergency events and preparedness. Wang et al.’s study analyzes the spatial and temporal patterns of wildfire-related tweets in attempt to analyze the content as well as evaluate the role of “opinion leaders” during these disasters.
 
@@ -11,7 +11,7 @@ The first step in their analysis was to gather a data set of tweets related to f
 
 This was followed by a content analysis consisting of two parts. Text mining, which identified clusters of words that appeared in the same tweets helped to identify the topics that were being tweeted about, while a social network analysis analyzed the behavior of retweets, identifying “opinion leaders” throughout these crises. The text mining section used the “tm” package in R. The tweets were cleaned by removing stopwords, and the frequency of the terms were calculated to check the variation in importance. The k-means clustering method identified clusters where terms appeared in the same group, which helped to glean what topics were included in the tweets. This information is shown in a table. The social network analysis was performed using the “igraph” package in R, however the methodology is not mentioned in the paper. However, this analysis was displayed effectively in a hub-and-spoke web, which shows the relationship between users. This method highlights the “opinion leader” users who played a key role in sharing information.
 
-###Do you consider this research paper to be reproducible or replicable?
+### Do you consider this research paper to be reproducible or replicable?
 
 This study does a fairly good job at documenting their methodology, however, there are significant holes that would make a reproduction of the exact study quite difficult. While the main steps are well-documented, getting into the specific nitty-gritty parts of the analysis could prove to be arduous. Upon the first read through of the paper, one of the noticeable parts of the methodology that could lead to reproduction issues is that the intensity level is not specified when creating the raster map. Further, in the text mining section, the specific stop words were not provided (I assume it is an R package), and the process of converting words to their base form was not clear. As for the clustering section, k values were not specified, and while there are methods to find the best fit k (Pandas package, etc.), their specific methodology is not clear. I assume the R package they used had a similar function, however without the code it is hard to reproduce well. Finally, the social network analysis portion of the study has little documentation of the workflow other than referencing the “igraph” package. This was particularly frustrating after the other steps were better documented. With all that being said, the study seems replicable, meaning it could be done with different data with a similar workflow, albeit it would not be exact. However, a reproduction of the study may prove to be difficult despite the moderately well-explained methods section.
 
