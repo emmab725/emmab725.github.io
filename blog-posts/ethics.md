@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ethics in Volunteered Geographic Information
+title: Ethics of Volunteered Geographic Information
 ---
 
 ### What types of uncertainty are most prevalent in the use of volunteered geographic information (VGI) for research on disasters and humanitarian crises?
