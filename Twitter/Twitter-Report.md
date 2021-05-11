@@ -54,14 +54,14 @@ In order to access Twitter data, I first had to set up an API developer account,
 
 Once gaining access to the database, I scraped tweets into R Studio using the parameters "vaccine OR pfizer OR moderna", within a 1000 mile radius of the coordinates 40, -108, a random point in the middle of the United States.
 
-The R code file for scraping and cleaning the tweets can be found [here]().
+The R code file for scraping and cleaning the tweets can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/procedure/code/01-search_covid.r).
 
 Because my data did not encompass the entire United States, I merged data with [Hannah Rigdon](https://hrigdon98.github.io/)'s data, which was gathered using the same search terms for the Eastern half of the country. This raised my Tweet count from 5650 tweets to 9461. This was done with using the anti_join() and full_join() commands.
 
 Methods for analysis consisted of three main parts: a temporal analysis, a content analysis, and map of twitter activity/hotspot analysis. This procedure was the same as Joe Holler's.
 
-The R code for the data join and analysis can be found [here]() and here().
-The files containing status_id's for the search results can be found [here](), and the data used to normalize the tweets can be found [here]().
+The R code for the data join and analysis can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/procedure/code/02-analyze-covid.r) and [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/procedure/code/04-spatial-clustering-vaccine.r).
+The files containing status_id's for the search results can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/data/raw/public/vaccineids.txt), and the data used to normalize the tweets can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/data/derived/public/mayids.txt).
 
 ## Replication Results
 
