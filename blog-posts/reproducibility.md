@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research Uncertainty: Paving the Way for Reprodution vs. Replication
+title: Research Uncertainty: Paving the Way for Reproduction vs. Replication
 ---
 
 ### Summarize the analytical techniques applied and how the results of those techniques were communicated in text, numbers, tables or data visualizations.
