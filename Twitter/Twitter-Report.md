@@ -77,7 +77,7 @@ The files containing status_id's for the search results can be found [here](http
 ![Tweet Map](/assets/TweetMap.png)
 
 #### Hot Spot Analysis
-![Heat Map](/assets/map_new.jpeg)
+![Heat Map](/assets/map_new.png)
 
 #### Covid-19 Vaccination Rate by County
 ![Vaccine Map](/assets/PctVaccineMap.jpeg)
