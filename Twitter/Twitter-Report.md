@@ -81,7 +81,7 @@ The files containing status_id's for the search results can be found [here](http
 
 #### Covid-19 Vaccination Rate by County
 ![Vaccine Map](/assets/PctVaccineMap.jpeg)
-Some states keep poor track of vaccination rates per county, thus I removed counties with less than 75% .....
+Some states keep poor track of vaccination rates per county, thus I removed counties where less 75% of state records had a county attached so we don't "artificially depress" the vaccination rate. Thanks [Benjy Renton](https://twitter.com/bhrenton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) for this tip and data! 
 
 ## Unplanned Deviations from the Protocol
 I encountered a number of unplanned deviations from the protocol.
