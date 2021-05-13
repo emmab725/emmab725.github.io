@@ -19,3 +19,4 @@ Hi! I'm Emma Brown and I am a senior at Middlebury College studying Geography an
 - [Uncertainty and Error](blog-posts/uncertainty.md)
 - [Research Uncertainty: Paving the way for Reproduction or Replication](blog-posts/reproducibility.md)
 - [Ethics of Volunteered Geographic Information](blog-posts/ethics.md)
+- [A Bottom-Up Approach to Epidemic Modeling](blog-posts/reproducibility_ethics.md)
