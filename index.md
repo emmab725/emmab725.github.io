@@ -17,6 +17,6 @@ Hi! I'm Emma Brown and I am a senior at Middlebury College studying Geography an
 - [What is Open Source GIS?](blog-posts/open-source.md)
 - [Is GIS a Science?](blog-posts/GIS-as-science.md)
 - [Uncertainty and Error](blog-posts/uncertainty.md)
-- [Research Uncertainty: Paving the way for Reproduction or Replication](blog-posts/reproducibility.md)
+- [Twitter Wildfires](blog-posts/reproducibility.md)
 - [Ethics of Volunteered Geographic Information](blog-posts/ethics.md)
 - [A Bottom-Up Approach to Epidemic Modeling](blog-posts/reproducibility_ethics.md)
