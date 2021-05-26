@@ -25,7 +25,7 @@ The original study is a multi-criteria analysis of vulnerability to Climate Chan
 
 The study region is the country of Malawi. The spatial support of input data includes DHS survey points, Traditional Authority boundaries, and raster grids of flood risk (0.833 degree resolution) and drought exposure (0.416 degree resolution).
 
-The original study was published without data or code, but has detailed narrative description of the methodology. The methods used are feasible for undergraduate students to implement following completion of one introductory GIS course. The study states that its data is available for replication in 23 African countries.
+The purpose of replicating this study is to facilitate a response to climate change. The original study was published without data or code, but has detailed narrative description of the methodology. The methods used are feasible for undergraduate students to implement following completion of one introductory GIS course. The study states that its data is available for replication in 23 African countries.
 
 
 ## Data Description and Variables
@@ -38,8 +38,7 @@ The DHS dataset was collected by the US Agency for International Development (US
 
 The original study constructs 10 indicators from 14 survey variables in order to assess each household’s financial and social assets as well as access to markets, information, and resources (Malcomb et al. 2014). These indicators measure financial assets such as livestock, land ownership, money, and access to technology and information, as well as demographic information such as household gender and age composition, health status, and market access/location. A full list of indicators used is available [here](https://github.com/emmab725/RP-Malcomb/blob/main/data/metadata/dhs-indicators-used.xlsx).
 
-The survey cluster points were aggregated from the village level into 250 traditional authorities to allow for a more detailed and meaningful analysis (Malcomb et al. 2014).
-
+The survey cluster points were aggregated from the village level into 250 traditional authorities to allow for a more detailed and meaningful analysis (Malcomb et al. 2014). To protect the anonymity of survey takers, the DHS points were randomly placed within a 2km radius in urban areas, and up to 5km radius in rural areas. This can create some uncertainty because this randomization, at the scale at which they were measured, can cross over the Traditional Authority (TA) boundaries. These are the boundaries that are used to create figures 1 and 3, shown below. See Paige Dickson's [analysis of cluster displacement](https://pdickson2.github.io/final.html) for more info on this uncertainty.
 
 ### [FEWSnet Livelihood Sensitivity](https://fews.net/fews-data/335)
 
@@ -52,14 +51,14 @@ The vector dataset of livelihood zones were created in 2003 by updating a previo
 
 ### UNEP/GRID [Flood](https://github.com/emmab725/RP-Malcomb/blob/main/data/raw/public/fl1010irmt.tif) and [Drought](https://github.com/emmab725/RP-Malcomb/blob/main/data/raw/public/dr1010ipeykx.tif) Exposure
 
-The UNEP Grid dataset is a set of two publicly available raster layers that was used in this lab to determine population exposure values to drought events and flood hazard. Both data layers were initially developed by UNEP/GRID-Europe for the Global Assessment Report of Risk Reduction. The data layer for physical exposure to drought events was developed based on three other sources: global monthly precipitation data, a GIS model of standardized precipitation, and a grid layer of global population. This layer reflects estimated physical exposure to drought for the temporal window between 1980 and 2001. The flood risk raster layer reflects estimated risk on an index scale between 1 (low) and 5 (extreme).
+The UNEP Grid dataset is a set of two publicly available raster layers that was used in this lab to determine population exposure values to drought events and flood hazard. Both data layers were initially developed by UNEP/GRID-Europe for the Global Assessment Report of Risk Reduction. The data layer for physical exposure to drought events was developed based on three other sources: global monthly precipitation data, a GIS model of standardized precipitation, and a grid layer of global population. This layer reflects estimated physical exposure to drought for the temporal window between 1980 and 2001. The flood risk raster layer reflects estimated risk on an index scale between 1 (low) and 5 (extreme). The resolution of this data is 0.833 degrees.
 
 Within the r script, the raster layers are transformed and resampled to reflect a new, more focused study area. The CRS is reset to 4326 to be consistent with other layers. Later on in the methods the drought risk and the flood risk are resampled using a bilinear method for drought risk and nearest neighbor for flood risk, to then be incorporated into our overall understanding of vulnerability.
 
 
 ### Traditional Authorities Boundaries
 
-The Traditional Authorities (TA) data is a vector layer from the Database for Global Administrative Areas (GADM). The data is from 2010, and was extracted from the [database](https://gadm.org/), version 2.8, November 2015. Its use is restricted to non-commercial purposes. The license states “It is not allowed to redistribute these data, or use them for commercial purposes, without prior consent.” Traditional Authorities are one level below the district level in Malawi, and offer the lowest level of “meaningful administrative power” (Malcomb et al. 2014). Because the TAs are the scale at which the analysis is conducted, the data itself is not transformed, however, the DHS data was aggregated to this scale.
+The Traditional Authorities (TA) data is a vector layer from the Database for Global Administrative Areas (GADM). The data is from 2010, and was extracted from the [GADM database](https://gadm.org/), version 2.8, November 2015. Its use is restricted to non-commercial purposes. The license states “It is not allowed to redistribute these data, or use them for commercial purposes, without prior consent.” Traditional Authorities are one level below the district level in Malawi, and offer the lowest level of “meaningful administrative power” (Malcomb et al. 2014). Because the TAs are the scale at which the analysis is conducted, the data itself is not transformed, however, the DHS data was aggregated to this scale.
 In the R script, it is reprojected in order to match the CRS of other spatial data layers.
 
 
@@ -71,7 +70,7 @@ The major lakes dataset is a vector layer downloaded from the Malawi Spatial Dat
 ### Analytical Specification
 
 The original study was conducted using ArcGIS and STATA, but does not state which versions of these software were used.
-The replication study will use R.
+The replication study will use R 4.0.2 GUI 1.72 Catalina build.
 
 ## Materials and Procedure
 
@@ -120,38 +119,39 @@ In order to measure the success of our reproduction we compared our final map ou
 
 ## Reproduction Results
 
-Our reproduction supports Malcomb et al.’s assessment of adaptive capacity at the Traditional Authority level (Figure 4 in the paper). A difference map (fig. 3) shows general agreement between our adaptive capacity map (fig. 1) and a digitized version of the adaptive capacity map presented by Malcomb et al., with most regions in our reproduction matching or being within one class break of the original value. A confusion matrix comparing the two maps (fig. 5) yielded a Spearman’s rho value of 0.77, indicating a relatively strong correlation between the original study and our reproduction.
+Our reproduction supports Malcomb et al.’s assessment of adaptive capacity at the Traditional Authority level (Figure 4 in the paper). A difference map (fig. 1) shows general agreement between our adaptive capacity map (fig. 2) and a digitized version of the adaptive capacity map presented by Malcomb et al., with most regions in our reproduction matching or being within one class break of the original value. A confusion matrix comparing the two maps (fig. 3) yielded a Spearman’s rho value of 0.77, indicating a relatively strong correlation between the original study and our reproduction. However, a high Spearman's rho value can be achieved because the statistic is based on rank, and not value. It is possible that we would need an additional step to mask out the natural areas from this analysis, which would be an interesting step to add in a future reproduction.
 
-We failed to reproduce the original study’s assessment of climate vulnerability (Figure 5 in the paper). There was broad disagreement between our reproduction (fig. 2) and a digitized version of the original study’s map of climate vulnerability, as shown in a map of the difference between the original study and reproduction (fig. 4). A confusion matrix comparing the two maps yielded a Spearman’s rho value of 0.15, indicating a very low degree of correlation between the original study and our reproduction. As shown in a scatterplot of vulnerability scores from the original study vs. the reproduction (fig. 6), the reproduction consistently yielded lower vulnerability scores, falling below the line of equality. Prior to comparison, the vulnerability values were scaled from 0 to 1 over the range, from minimum to maximum. As we can see in fig. 6, vulnerability scores in the original study were clustered between 0.5 and 0.9, on the high end of the range, while vulnerability scores in the reproduction were mostly distributed lower in the range, from 0.1 to 0.7. Thus, the skewness of the two distributions of vulnerability scores might explain why the reproduction was almost always lower.
+We failed to reproduce the original study’s assessment of climate vulnerability (Figure 5 in the paper). There was broad disagreement between our reproduction (fig. 4) and a digitized version of the original study’s map of climate vulnerability, as shown in a map of the difference between the original study and reproduction (fig. 5). A confusion matrix comparing the two maps yielded a Spearman’s rho value of 0.15, indicating a very low degree of correlation between the original study and our reproduction. As shown in a scatterplot of vulnerability scores from the original study vs. the reproduction (fig. 6), the reproduction consistently yielded lower vulnerability scores, falling below the line of equality. Prior to comparison, the vulnerability values were scaled from 0 to 1 over the range, from minimum to maximum. As we can see in fig. 6, vulnerability scores in the original study were clustered between 0.5 and 0.9, on the high end of the range, while vulnerability scores in the reproduction were mostly distributed lower in the range, from 0.1 to 0.7. Thus, the skewness of the two distributions of vulnerability scores might explain why the reproduction was almost always lower.
 
-
-![Adaptive Capacity by TA – Reproduction Results](/assets/ac_2010.png)
-
-**Figure 1.** Reproduction results for adaptive capacity by traditional authority (TA), as calculated in R.
-
-&ensp;
-
-![Malawi Vulnerability – Reproduction Results](/assets/vulnerability.png)
-
-**Figure 2.** Reproduction results for vulnerability in Malawi, as calculated in R.
-
-&ensp;
+Overall, the georeferencing of Malcomb et al.(2014)'s worked fairly accurately, and those that we digitized compared well with those in the original study.
 
 ![Adaptive Capacity Difference – Original Study vs. Reproduction](/assets/ac_difference.png)
 
-**Figure 3.** Map of the difference between the adaptive capacity of the reproduction vs. the original study.
+**Figure 1.** Map of the difference between the adaptive capacity of the reproduction vs. the original study.
 
  &ensp;
 
-![Vulnerability Difference – Original Study vs. Reproduction](/assets/vuln_difference.png)
+![Adaptive Capacity by TA – Reproduction Results](/assets/ac_2010.png)
 
-**Figure 4.** Map of the difference between the vulnerability calculated in the reproduction vs. the original study.
+**Figure 2.** Reproduction results for adaptive capacity by traditional authority (TA), as calculated in R.
 
 &ensp;
 
 ![Confusion Matrix – Adaptive Capacity Reproduction](/assets/confusionmatrix.png)
 
-**Figure 5.** Confusion matrix comparing the Malcomb et al. (2014) results to the reproduction; note that the reproduction often yielded lower adaptive capacity scores than the original study, but the reproduction results for each TA were generally within one interval of the original study's results.
+**Figure 3.** Confusion matrix comparing the Malcomb et al. (2014) results to the reproduction; note that the reproduction often yielded lower adaptive capacity scores than the original study, but the reproduction results for each TA were generally within one interval of the original study's results.
+
+&ensp;
+
+![Malawi Vulnerability – Reproduction Results](/assets/vulnerability.png)
+
+**Figure 4.** Reproduction results for vulnerability in Malawi, as calculated in R.
+
+&ensp;
+
+![Vulnerability Difference – Original Study vs. Reproduction](/assets/vuln_difference.png)
+
+**Figure 5.** Map of the difference between the vulnerability calculated in the reproduction vs. the original study.
 
 &ensp;
 
@@ -167,9 +167,6 @@ In our initial understanding of this workflow, we planned to rasterize all of ou
 
 Upon a closer inspection of the data, our main source of uncertainty centered on how to numerically quantify the “disaster coping strategy” component of the livelihood sensitivity score. The closest thing Malcomb gives to a description is the “use of natural resources for coping with disasters” (Malcomb et al. 2014). We chose to quantify this using the self-employment source of income category in the FEWSNET data and categorized anything that seemed like “use of natural resources,” such as charcoal production, firewood, grass, and the sale of wild foods. However, this is a pretty large source of uncertainty in our analysis because we have very little information as to how Malcomb quantified this factor of livelihood sensitivity.
 
-It is also important to reiterate the levels of uncertainty apparent in all geographic representations (Longley et al. 2005). The data used for the replication is based on a specific conception of the real world, and each of the various data sources have a specific level of error within them. Furthermore, the aggregation of data from the household level into the village level, and later into traditional authorities can lead to uncertainty in representation.
-
-
 ## Discussion
 
 While we had some success reproducing Malcomb et al.’s classification of adaptive capacity, our attempt to reproduce the original authors’ assessment of climate vulnerability encountered significant challenges, largely stemming from the lack of code or a clear workflow in the original report. Inconsistencies and vagueness in the writing of the original report exacerbated the uncertainty introduced by the lack of code or workflow. Finally, in trying to reconstruct the authors’ definitions of livelihood sensitivity indicators we found significant concerns with the original study’s use and representation of that data.
@@ -180,6 +177,7 @@ Additionally, the original authors’ presentation of the FEWSNET livelihood zon
 
 Furthermore, it was sometimes unclear how the authors used the FEWSNET data on livelihood zones, because they included relatively little discussion of the variables in question – percent of food from one’s own farm, percent of income from wage labor, and percent of income from cash crops. A careful reading of the paper suggests that Malcomb et al. frame the first two as positive and the third as negative, but there is some uncertainty here, and our reproduction may have reversed the direction of one of these variables, explaining some of the divergence between the reproduction results and the original study.
 
+It is also important to reiterate the levels of uncertainty apparent in all geographic representations (Longley et al. 2005). The data used for the replication is based on a specific conception of the real world, and each of the various data sources have a specific level of error within them. Furthermore, the aggregation of data from the household level into the village level, and later into traditional authorities can lead to uncertainty in representation.
 
 ## Conclusion
 
