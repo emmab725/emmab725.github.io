@@ -12,6 +12,7 @@ Hi! I'm Emma Brown and I am a senior at Middlebury College studying Geography an
 - [Analyzing Flood Risk of Schools in Dar es Salaam](DSL/report.md)
 - [Reproducing a Vulnerability Model of Malawi](resilience/RP-Malcomb-Report.md)
 - [Replication of Twitter Data Analysis](Twitter/Twitter-Report.md)
+- [Spatial Accessibility of Covid-19 Healthcare Resources](covid/covid.md)
 
 ## Blog Posts
 - [What is Open Source GIS?](blog-posts/open-source.md)

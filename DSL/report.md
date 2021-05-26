@@ -9,7 +9,7 @@ What schools are at risk of flooding in the city of Dar es Salaam based on curre
 
 ## *Introduction:*
 
-Dar es Salaam, Tanzania's economic center and fourth largest city, is incredibly vulnerable to floods due to its coastal nature and prominent rivers that dissect the city. Floods are especially dangerous to low-lying informal settlements that are often inhabited by low-income individuals. Not only does this pose health risks and infrastructural damage, flooding can affect schools and hospitals which then limits the services in these low-income areas. Further, climate change will only exacerbate this issue as flooding becomes more prominent and more dangerous. 
+Dar es Salaam, Tanzania's economic center and fourth largest city, is incredibly vulnerable to floods due to its coastal nature and prominent rivers that dissect the city. Floods are especially dangerous to low-lying informal settlements that are often inhabited by low-income individuals. Not only does this pose health risks and infrastructural damage, flooding can affect schools and hospitals which then limits the services in these low-income areas. Further, climate change will only exacerbate this issue as flooding becomes more prominent and more dangerous.
 
 Creating and maintaining equitable access to education is essential for planning resilient communities, especially in cities like Dar es Salaam where rapid urbanization and population growth is bringing in large numbers of new residents. We explored the flood risk of schools and universities within the city of Dar es Salaam, based on the location of flood zones determined by participatory mapping projects in the [Resilience Academy](https://resilienceacademy.ac.tz/).
 
@@ -46,7 +46,7 @@ FROM schools
 GROUP BY name, amenity;
 ```
 
-Next, we worked to prepare the flood data and a flood data column in the school centroids table. The flooded column will be updated with yes or no if the school centroid is at a flood risk.
+Next, we worked to prepare the flood data and a flood data column in the school centroids table. The flooded column will be updated with yes or no if the school centroid is at a flood risk. We created centroids for the schools because we noticed that some of the schools had multiple buildings, which we did not want to count as multiple different schools. Creating centroids created a central point to represent the school, if the school had multiple buildings.
 
 ```SQL
 -- adding column "flooded"
@@ -137,6 +137,8 @@ The spatial distribution of schools that are vulnerable to flood risk in Dar es 
 To further explore the spatial dimensions of flood risk in Dar es Salaam schools, you can access our [interactive map](assets/Webmap).
 
 While the Administrative Wards of Dar es Salaam are labeled on the map, and serve as a useful backdrop for understanding location of these school buildings, we choose not to evaluate risk based on schools per ward due to the nature of the education system in the city. Oftentimes students do not go to the school closest to them, so instead of grouping schools based on a spatial component we chose to focus on the individual projected risk of each building.
+
+It is also important to recognize that creating centroids for the schools may have skewed the results a bit, and may not reflect the ground truth. Because some of the schools had multiple buildings which we did not want to count as multiple different schools, we chose to create centroids. However, because of this generalization, there may be instances on-the-ground where a school building is flooded, but the centroid is not. In this case, our analysis would indicate that a school is flooded, but in reality, not the *whole* school would be flooded. Contrarily, there is possibility that the centroid is flooded, but a school building is not. In the future, it would be beneficial to redo this analysis with this in mind.
 
 *Sources:*
 
