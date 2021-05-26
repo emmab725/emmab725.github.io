@@ -14,7 +14,7 @@ First replication study by Holler, J. 2021 (in preparation). Hurricane Dorian vs
 Replication Author:
 Emma Brown
 
-Replication Materials Available at: [github repository name](github repository link)
+Replication Materials Available at: [emmab725/twitter-analysis](https://github.com/emmab725/twitter-analysis)
 
 Created: `5 May 2021`
 Revised: `10 May 2021`
@@ -23,13 +23,13 @@ Revised: `10 May 2021`
 
 As social media becomes more prominent in everyday life among many generations, it can be a useful tool in disseminating information, especially related to emergency events and preparedness. Wang et al.’s study analyzes the spatial and temporal patterns of wildfire-related tweets in attempt to analyze the content as well as evaluate the role of “opinion leaders” during these disasters.
 
-Wang et al (2016) analyzed Twitter data for wildfires in California, finding that the social media data can enhance "situational awareness and provide useful information on disaster situations. By analyzing the spatial and temporal patterns of these wildfire-related tweets, Wang et al. were able to characterize the disaster across space and time. By conducting a network analysis, they were also able to evaluate how disaster-related information was spread, and who the dominant users spreading this knowledge were.
+Wang et al. (2016) analyzed Twitter data for wildfires in California, finding that the social media data can enhance "situational awareness and provide useful information on disaster situations. By analyzing the spatial and temporal patterns of these wildfire-related tweets, Wang et al. were able to characterize the disaster across space and time. By conducting a network analysis, they were also able to evaluate how disaster-related information was spread, and who the dominant users spreading this knowledge were.
 
 Holler (2021) is studying Twitter data for Hurricane Dorian on the Atlantic coast, finding that in spite of tending news and social media content regarding a false narrative of risk, original Tweets still clustered significantly along the real hurricane track, and only along the hurricane track.
 
 Reproducing and replicating spatial research of Twitter data continues to be relevant as social media continues to grow as a prominent news source. However, there are ethical questions and concern that arise when using this data involving consent and transparency of the data use. Read more about the ethics of volunteered geographic information (VGI) [here](https://emmab725.github.io/blog-posts/ethics.html).
 
-In his replication study, I will analyze tweets about the Covid-19 vaccine to explore the question: are patterns of social media activity about the Covid-19 vaccine representative of Covid-19 vaccination rates?
+In this replication study, I will analyze tweets about the Covid-19 vaccine to explore the question: are patterns of social media activity about the Covid-19 vaccine representative of Covid-19 vaccination rates? It is interesting to replicate Wang et al. (2016)'s study with Covid-19 vaccine data as it allows us to see where the vaccine is more widely talked about, which could indicate areas with higher vaccination rates. This will give insight to the social demographic makeup of the United States regarding the vaccine.
 
 ## Original Study Information
 
@@ -50,51 +50,74 @@ The replication study by Holler (2021) used R, including the rtweet, rehydratoR,
 
 ## Materials and Procedure
 
-In order to access Twitter data, I first had to set up an API developer account, which can be done so [here](https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html).
+In order to access Twitter data, I first had to set up an API developer account, which can be done so [here](https://developer.twitter.com/en/apply-for-access).
 
 Once gaining access to the database, I scraped tweets into R Studio using the parameters "vaccine OR pfizer OR moderna", within a 1000 mile radius of the coordinates 40, -108, a random point in the middle of the United States.
 
 The R code file for scraping and cleaning the tweets can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/procedure/code/01-search_covid.r).
 
-Because my data did not encompass the entire United States, I merged data with [Hannah Rigdon](https://hrigdon98.github.io/)'s data, which was gathered using the same search terms for the Eastern half of the country. This raised my Tweet count from 5650 tweets to 9461. This was done with using the anti_join() and full_join() commands.
+Because my data did not encompass the entire United States, I merged data with [Hannah Rigdon](https://hrigdon98.github.io/)'s data, which was gathered using the same search terms for the Eastern half of the country. Specifically, her data was within a thousand mile radius of central Pennsylvania (37, -94). This raised my Tweet count from 5650 tweets to 9461. This was done with using the anti_join() and full_join() commands. I also used "normal" twitter activity from within the same time range and radius in order to normalize the twitter activity, and used population data from the US Census to normalize the tweet rate.
 
 Methods for analysis consisted of three main parts: a temporal analysis, a content analysis, and map of twitter activity/hotspot analysis. This procedure was the same as Joe Holler's.
 
 The R code for the data join and analysis can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/procedure/code/02-analyze-covid.r) and [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/procedure/code/04-spatial-clustering-vaccine.r).
 The files containing status_id's for the search results can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/data/raw/public/vaccineids.txt), and the data used to normalize the tweets can be found [here](https://github.com/emmab725/twitter-analysis/blob/main/RE-Dorian-main/data/derived/public/mayids.txt).
+I compared the Twitter data to vaccination rates of each state, the data for which was provided by [Benjy Renton](https://github.com/bhrenton/cdc-vaccination-data).
 
 ## Replication Results
 
 #### Temporal Analysis
 ![Temporal Tweet Graph](/assets/Word_graph_new.png)
 
+**Figure 1** shows the temporal analysis of the collected tweets from the combined dataset
+
+&ensp;
+
 #### Content Analysis
 ![Word Frequency](/assets/word_chart_new.png)
 
+**Figure 2** shows the most frequently used words along with vaccine, pfizer, or moderna.
+
+&ensp;
+
 ![Word Pair Frequency](/assets/word_network_new.png)
+
+**Figure 3** shows the most frequent pairings of words within the Tweets.
+
+&ensp;
 
 #### Map of Twitter Activity
 ![Tweet Map](/assets/TweetMap.png)
 
+**Figure 4** shows the locations of where Tweets mention the vaccine.
+
+&ensp;
+
 #### Hot Spot Analysis
 ![Heat Map](/assets/map_new.png)
 
+**Figure 5** shows the clusters of where Tweets mentioning the vaccine are.
+
+&ensp;
+
 #### Covid-19 Vaccination Rate by County
 ![Vaccine Map](/assets/PctVaccineMap.jpeg)
-Some states keep poor track of vaccination rates per county, thus I removed counties where less 75% of state records had a county attached so we don't "artificially depress" the vaccination rate. Thanks [Benjy Renton](https://twitter.com/bhrenton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) for this tip and data! 
+
+**Figure 6** shows a map of COVID-19 vaccination rates in the US.
+Some states keep poor track of vaccination rates per county, thus I removed counties where less 75% of state records had a county attached so we don't "artificially depress" the vaccination rate. Thanks [Benjy Renton](https://twitter.com/bhrenton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) for this tip and data!
 
 ## Unplanned Deviations from the Protocol
 I encountered a number of unplanned deviations from the protocol.
 
 First, the tweets I scraped used the key words "vaccine," "moderna" and "pfizer," which does not account for tweets specifically regarding the Johnson and Johnson vaccine. Further, including the key word "vaccination" would have made for a more thorough search.
 
-Another notable unplanned deviation were issues encountered when merging the two sets of vaccine tweet data to create a database for the entire country. Because there was overlap in the region we scraped This was done using an anti join, which removed from my dataset all the duplicate tweets from the second dataset. I then joined this new dataset with Hannah's to create a full dataset encompassing the whole country. However, a user is only able to scrape tweets from the leading 6 days, and because Hannah and I scraped our tweets on different days, our data is slightly inaccurate. It is uncertain how different the results would be had we scraped the data on the same days. Thus, while our timelines were slightly off, it is overall representative from April 27 to May 10.
+Another notable unplanned deviation were issues encountered when merging the two sets of vaccine tweet data to create a database for the entire country. Because there was overlap in the region we scraped This was done using an anti join, which removed from my dataset all the duplicate tweets from the second dataset. I then joined this new dataset with Hannah's to create a full dataset encompassing the whole country. However, a user is only able to scrape tweets from the leading 6 days, and because Hannah and I scraped our tweets on different days, our data is slightly inaccurate. It is uncertain how different the results would be had we scraped the data on the same days. Thus, while our timelines were slightly off, it is overall representative from April 27 to May 10. It is interesting, however to note that where our data overlaps (in middle of the country), there are low rates of tweets about the vaccine (figure 5). This is interesting considering that this part of the country is where we would potentially expect a higher count of tweets, because of the overlapping temporal windows. Even though we removed duplicate tweets, there is still a chance that there are more tweets in this area than if it was scraped on the same day. This may suggest that there are lower rates of vaccine-related tweets in middle America than what is shown on the map, because this area is that shows tweets from a larger timeframe. 
 
 ## Discussion
 
 The temporal analysis shows a spike in tweets regarding the vaccine around May 6th. This was an interesting finding, considering there were no notable changes in vaccination policy or rollout on that day. After some research, I found that May 6th is National Nurse Day, which could have contributed to a higher count of tweets about the vaccine. However, this cannot be concluded without a closer look at the tweets.
-Looking at the content analysis, it is unsurprising that "covid" and "shot" top the chart with the highest count. The prevalence of "2," and "2nd" indicates that tweets likely relate to second dosages, alluding to the fact that many users are on the road to being fully vaccinated.
-The hot spot analysis and vaccination rate map are of particular importance when answering the initial study question, which is if patterns of social media activity about the Covid-19 vaccine is representative of vaccination rates. When comparing the two figures, there is some indication that these may be related. Areas along the West coast of the US have a higher vaccination rate, and the Twitter hotspot map indicates that there are high levels of tweets about the vaccine in those areas as well. Similarly, areas in the Northeast, as well as the Midwest (parts of Illinois, Iowa and Wisconsin) have high tweet activity and vaccination rates. Contrarily, it appears as though areas with low tweet activity about the vaccine, like the Southeast, have low vaccination rates. While this is enough to make lofty claims about correlation, it is interesting to note these similarities in both maps.
+Looking at the content analysis, it is unsurprising that "covid" and "shot" top the chart with the highest count (figure 2). The prevalence of "2," and "2nd" indicates that tweets likely relate to second dosages, alluding to the fact that many users are on the road to being fully vaccinated.
+The hot spot analysis (figure 5) and vaccination rate map (figure 6) are of particular importance when answering the initial study question, which is if patterns of social media activity about the Covid-19 vaccine is representative of vaccination rates. When comparing the two figures, there is some indication that these may be related. Areas along the West coast of the US have a higher vaccination rate, and the Twitter hotspot map indicates that there are high levels of tweets about the vaccine in those areas as well. Similarly, areas in the Northeast, as well as the Midwest (parts of Illinois, Iowa and Wisconsin) have high tweet activity and vaccination rates. Contrarily, it appears as though areas with low tweet activity about the vaccine, like the Southeast, have low vaccination rates. While this is enough to make lofty claims about correlation, it is interesting to note these similarities in both maps.
 
 ## Conclusion
 
