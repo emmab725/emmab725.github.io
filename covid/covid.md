@@ -33,7 +33,7 @@ The hospital dataset was pre-processed to exclude military, children, psychiatri
 
 The conventional two-step floating catchment area (2SFCA) begins by first summing all people located within a catchment area of each healthcare service, which is based on a 30 minute travel time threshold. Then, the service-to-population ratio is calculated within the catchment. "Service" refers to ICU beds and/or ventilators. A ratio was calculated for both at-risk (defined as over age 50) as well as COVID-19 patients. The E2SFCA method accounts for the distance decay, by allowing for multiple travel time zones, such as 0–10, 10–20, and 20–30 min. Three weights (1, 0.68, and 0.22) were applied to each travel time zone, respectively. These value of these weights, are not explained in the paper. Accessibility was calculated as the sum of the service-to-puplation ratio. Next, the accessibility measurements were aggregated into hexagon grids. Hexagons were used to minimize orientation bias from edge effects. In the case of catchment areas that overlapped more than 50%, the values at each hexagon grid was aggregated.
 
-The script to my analysis can be found [here](), and the full repository, which includes the data, can be found [here]().
+The script to my analysis can be found [here](https://github.com/emmab725/RP-Kang/blob/main/new_Covid-19.ipynb), and the full repository, which includes the data, can be found [here](https://github.com/emmab725/RP-Kang).
 
 ### Changes to Methods
 While the original study looks at both the state of Illinois and the city of Chicago, this reproduction looks just at Chicago using an original analysis code modified by [Joseph Holler](https://github.com/josephholler).
